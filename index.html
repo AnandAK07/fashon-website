@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>glossier.com</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    #main {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #navbar {
+        position: absolute;
+        font-size: 16px;
+        font-weight: 450;
+        letter-spacing: normal;
+        left: 0;
+        right: 0;
+        display: flex;
+        max-width: 2500px;
+        width: 100%;
+        padding: 0;
+        background-color: rgb(0, 0, 0, 0.2);
+        margin: auto;
+        z-index: 1;
+
+    }
+
+
+    #bg_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        box-sizing: border-box;
+        padding: 0;
+        border: none;
+        margin: auto;
+        display: block;
+        width: 0;
+        height: 0;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+
+
+    }
+
+    #bg_img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #logo {
+        width: 21.6%;
+        margin: 2.1% 0% 2% 16.5%;
+    }
+
+    .link-btn {
+        color: #ffffff;
+        text-decoration: none;
+        line-height: 23px;
+    }
+
+    #text_bg {
+        position: absolute;
+        display: flex;
+        z-index: 1;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        max-width: 40%;
+        bottom: 30vh;
+        left: 12vh;
+    }
+
+    /* #logoImg{
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  color: rgb(232, 181, 181);
+  width: 10%;
+  bottom: 55vh;
+  left: 12vh;
+} */
+
+    #bgShadow {
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+
+    #text_bg {
+        font-size: 300px;
+    }
+
+    #bg_desc {
+        color: white;
+        width: 40%;
+    }
+
+
+    #glossier_bg img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    #rksec {
+        display: flex;
+        /* gap: 50px; */
+        justify-content: space-between;
+        font-family: sans-serif;
+        width: 95%;
+    }
+
+    #subsec {
+        font-size: 50px;
+    }
+
+    #rksec2 {
+        width: 38%;
+    }
+
+    #sec-two {
+        /* border: 2px solid blue; */
+        width: 60%;
+    }
+
+    #main-center {
+        width: 70%;
+        border: 2px solid red;
+        margin-left: 13%;
+
+    }
+
+    #rkbest {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+
+    }
+
+    #our-best {
+        text-decoration: none;
+        color: grey;
+        font-size: 14px;
+    }
+
+    #rkbestseller {
+        /* text-decoration: none; */
+        color: grey;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+        <!-- Navbar div -->
+        <div id="navbar_container"></div>
+
+        <!-- background image -->
+        <div id="bg_img">
+            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-hp-desktop.png?auto=compress,format&cs=srgb&w=540"
+                alt="Playo bg image">
+        </div>
+
+        <!-- text -->
+        <div id="bgShadow">
+            <div id="bg_desc">
+                <h3>boy brow</h3>
+                <p>Now with 20% more formula and 2 new shades <br>Dark Brown and Grey.</p>
+                <button>Shop now</button>
+            </div>
+            <div id="glossier_bg">
+                <img src="https://glossier-prod.imgix.net/files/Cropped_logo_white.png?auto=compress,format&cs=srgb&w=1944"
+                    alt="">
+            </div>
+
+        </div>
+
+    </div>
+    <div id="rksec">
+        <div id="sec-one">
+            <h3 id="subsec">LIFE</h3>
+        </div>
+
+        <div id="sec-two">
+            <h3 id="subsec">BEAUTY INSPIRED BY REAL</h3>
+            <div id="rksec2">
+                <p id="subsecp">Glossier is a new approach to beauty. It's about fun and freedom and being OK with
+                    yourself today. We make intuitive, uncomplicated products designed to live with you</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="main-center">
+        <div id="rkbest">
+            <a id="our-best" href="">OUR BEST</a>
+
+            <a id="rkbestseller" href="#">Shop bestsellers</a>
+
+        </div>
+    </div>
+</body>
+
+</html>

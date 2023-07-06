@@ -29,7 +29,7 @@ function handleInputClick(event) {
       if (userExists) {
         // User exists and login successful
         const userName = extractUserName(email);
-        window.location.href = `homepage.html?user=${userName}`;
+        window.location.href = `homepage.html?email=${email}`;
       } else {
         // User does not exist or login credentials are incorrect
         const errorMessage = document.getElementById('error');

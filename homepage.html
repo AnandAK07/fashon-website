@@ -11,6 +11,17 @@
         margin: 0px;
     }
 
+    h1 {
+  margin-top: 0;
+  background-color: grey;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin:auto;
+}
+
     #main {
         position: relative;
         width: 100%;
@@ -345,6 +356,7 @@
 </style>
 
 <body>
+    <h1 id="user-email"></h1>
     <div id="main">
 
         <div id="navbar_container"></div>
@@ -603,4 +615,12 @@
     button.addEventListener("click", function () {
         window.location.href = "#"
     })
+
+    // Get the query parameter from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
+
+  // Display the user's email on the page
+  const userEmailElement = document.getElementById('user-email');
+  userEmailElement.textContent = `Welcome, ${email}!`;
 </script>

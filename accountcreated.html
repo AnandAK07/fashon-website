@@ -4,42 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Account Created</title>
+  <link rel="stylesheet" href="accountcreated.css">
   <style>
     body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+        margin: 0;
+        padding: 0;
+    }
 
-.container {
-  max-width: 400px;
-  padding: 20px;
-  text-align: center;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        height: 40px; /* Decreased navbar height */
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid grey;
+    }
 
-h2 {
-  margin-top: 0;
-  color: pink;
-}
+    #nav-center {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
 
-p {
-  margin-bottom: 15px;
-}
+    #nav-center a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
 
-a {
-  color: pink;
-  text-decoration: none;
-}
+    #nav-right {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
+
+    #nav-right a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
   </style>
 </head>
 <body>
+  <nav id="navbar">
+    <div id="nav-left">
+      <h1>Glossier.</h1>
+    </div>
+    
+    <div id="nav-center">
+      <a href="">SKINCARE</a>
+      <a href="">makeup</a>
+      <a href="">body</a>
+      <a href="">fragrance</a>
+      <a href="">glossiwear</a>
+      <a href="">sets</a>
+    </div>
+
+    <div id="nav-right">
+      <a href="">stories</a>
+      <a href="">search</a>
+      <a href="">login</a>
+      <a href="">bags <span id="count">(0)</span></a>
+    </div>
+  </nav>
+
   <div class="container">
     <h2>Account Created Successfully</h2>
     <p>Your account has been successfully created.</p>

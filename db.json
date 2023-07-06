@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "firstName": "Sweta",
+      "lastName": "Kumari",
+      "email": "sweta.p2507@gmail.com",
+      "password": "Glossier@123",
+      "id": 1
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Kumari",
+      "email": "sweta.p2507@gmail.com",
+      "password": "Glossier@123",
+      "id": 2
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Kumari",
+      "email": "sweta.p2507@gmail.com",
+      "password": "Glossier@123",
+      "id": 3
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Kumari",
+      "email": "sweta.p2507@gmail.com",
+      "password": "Glossier@123",
+      "id": 4
+    },
+    {
+      "firstName": "Sweta",
+      "lastName": "Kumari",
+      "email": "sweta.p2507@gmail.com",
+      "password": "Glossier@123",
+      "id": 5
+    }
+  ]
+}

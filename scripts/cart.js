@@ -304,6 +304,8 @@ const closeBtn=document.getElementById('close_btn')
 const backdrop=document.querySelector('.backdrop')
 const itemsEl=document.querySelector('.items')
 const cartItems=document.querySelector('.cart_items')
+const itemsNum=document.getElementById('items_num')
+const subtotalPrice=document.getElementById('subtotal_price')
 
 renderItems()
 renderCartItems()
@@ -340,6 +342,7 @@ function addItem(idx,itemId){
   const foundedItem=cart_data.find(item=>item.id.toString()===itemId.toString())
   if(foundedItem){
     //increase item qty
+    increaseQty(itemId)
   }else{
     cart_data.push(ITEMS[idx])
   }
@@ -359,8 +362,8 @@ function renderItems(){
   })
 }
 
-// Remove cart Items
-function removeCartItem(){
+// Remove cart Items 
+function removeCartItem(itemId){
   cart_data=cart_data.filter((item)=>item.id!=itemId)
   updateCart()
 }
@@ -369,6 +372,29 @@ function removeCartItem(){
 function increaseQty(itemId){
   cart_data=cart_data.map(item=>item.id.toString()===itemId.toString()?{...item,qty:item.qty+1}:item)
   updateCart()
+}
+//Decrease Qty
+function decreaseQty(itemId){
+  cart_data=cart_data.map(item=>item.id.toString()===itemId.toString()?{...item,qty:item.qty>1?item.qty-1:item.qty}:item)
+  updateCart()
+}
+
+// Calculate Items Number
+function calcItemsNum(){
+  let itemsCount=0
+
+  cart_data.forEach((item)=>(itemsCount+=item.qty))
+
+  itemsNum.innerText=itemsCount
+}
+
+// Calculate Subtotal Price
+function calcSubtotalPrice(){
+  let subtotal=0
+
+  cart_data.forEach((item)=>(subtotal+=item.price*item.qty))
+
+  subtotalPrice.innerText=subtotal
 }
 
 //Display /Render Cart Items
@@ -382,7 +408,7 @@ function renderCartItems(){
     cartItem.classList.add('cart_item')
     cartItem.innerHTML=
     `
-        <div class="remove_item" onclick="removeCartItem(${item.id})">
+        <div onclick="removeCartItem(${item.id})" class="remove_item">
             <span id="delP">&times;</span>
         </div>
         <div class="item_img">
@@ -392,7 +418,7 @@ function renderCartItems(){
             <p>${item.name}</p>
             <strong>${item.price}</strong>
             <div class="qty">
-                <span>-</span>
+                <span onclick="decreaseQty(${item.id})">-</span>
                 <strong>${item.qty}</strong>
                 <span onclick="increaseQty(${item.id})">+</span>
             </div>
@@ -407,5 +433,9 @@ function renderCartItems(){
 function updateCart(){
   //rerender cart items with updated data
   renderCartItems();
+  //Update Items Number in cart
+  calcItemsNum();
+  // Update Subtotal Price
+  calcSubtotalPrice();
 }
 

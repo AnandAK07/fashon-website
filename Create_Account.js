@@ -88,3 +88,9 @@ function handleInputClick(event) {
   inputFields.forEach(input => {
     input.addEventListener('click', handleInputClick);
   });
+
+  // Event listener for "Sign in to Glossier.com" button
+const signInButton = document.querySelector('.btn.btn-secondary');
+signInButton.addEventListener('click', function () {
+  window.location.href = 'login.html';
+});

@@ -130,7 +130,8 @@
     #subsec {
         font-size: 50px;
     }
-    #subsecp{
+
+    #subsecp {
         min-width: 110%;
     }
 
@@ -225,13 +226,13 @@
     #our-best {
         text-decoration: none;
         color: grey;
-        font-size:12px;
+        font-size: 12px;
     }
 
     #rkbestseller {
         /* text-decoration: none; */
         color: grey;
-        font-size:12px;
+        font-size: 12px;
     }
 
     #scroll-container {
@@ -247,8 +248,14 @@
         height: auto;
     }
 
+    #scroll-container a img {
+        padding: 2px;
+        width: 24%;
+        height: auto;
+    }
+
     #rkimggrid p {
-        font-size:12px;
+        font-size: 12px;
     }
 
     #main-grid {
@@ -258,90 +265,140 @@
         height: auto;
         /* border: 1px solid red; */
     }
-    #main-grid a img{
+
+    #main-grid a img {
         max-width: 100%;
         /* border: 1px solid red; */
     }
-    #skin-rk{
+
+    #skin-rk {
         max-width: 100%;
 
     }
-    #skin-rk h3,p{
+
+    #skin-rk h3,
+    p {
         padding: 10px;
         width: 55%;
-        
+
     }
-    #rkquote{
+
+    #rkquote {
         display: flex;
         flex-direction: column;
         line-height: normal;
     }
-    #quotep{
-        font-size:12px;
-        
+
+    #quotep {
+        font-size: 12px;
+
     }
-    #quote2{
+
+    #quote2 {
         display: flex;
         flex-direction: row;
         min-width: 100%;
-        
 
-        
+
+
     }
-    #quote2 div{
+
+    #quote2 div {
         max-width: 33%;
     }
-   
-    #prk{
+
+    #prk {
         width: 100%;
         /* line-height: 10px; */
     }
-    #h2rk{
+
+    #h2rk {
         padding-left: 10px;
         font-family: 'Courier New', Courier, monospace;
         font-size: 30px;
         line-height: 10px;
     }
-    #quiz{
+
+    #quiz {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         /* border: 1px solid rgb(121, 121, 28); */
 
-        
+
     }
-    #quiz p{
+
+    #quiz p {
         justify-content: space-between;
-        font-size:12px;
+        font-size: 12px;
         text-decoration: underline;
     }
 
-    
-    #rkset{
+
+    #rkset {
         display: flex;
         flex-direction: row;
     }
-    #rkset p{
+
+    #rkset p {
         font-size: 12px;
         text-decoration: underline;
         display: block;
         /* margin-left: 100px; */
         justify-content: space-between;
         align-items: center;
-        
+
     }
-    #rksetlife{
+
+    #rksetlife {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
-    #rksetlife
+    #lifeh4{
+        font-size: 20px;
+    }
 
-    
+    #lifep {
+        font-size: 12px;
+        color: rgb(71, 69, 69);
+        /* margin-top: 50px;  */
+    }
+
+    #rksetlife div {
+        margin-top: 100px;
+    }
+
+    /* #lifeh4{
+        margin-right: 100px;
+        
+    } */
+    /* #rkshift{
+        display: block;
+        border: 1px solid red;
+    } */
 
 
+    #rknewimg {
+        display: flex;
+        flex-direction: row;
+        min-width: 100%;
+        height: auto;
+    }
+
+    #rknewimg img {
+        width: 25%;
+    }
+
+    #instabtn {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        float: right;
+        }
 </style>
 
 <body>
@@ -349,10 +406,10 @@
 
         <div id="navbar_container"></div>
 
-       
+
         <div id="bg_img">
             <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-hp-desktop.png?auto=compress,format&cs=srgb&w=540"
-                alt="Playo bg image">
+                alt="image">
         </div>
 
         <div id="bgShadow">
@@ -417,26 +474,33 @@
 
         </div>
         <div id="scroll-container">
-
-            <img src="https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                alt="Cinque Terre">
-            <img src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                alt="Forest">
-            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=540"
-                alt="Northern Lights">
-            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
-                alt="Mountains">
-            <img src="https://glossier-prod.imgix.net/files/PLP-In-grid-Tout-340x411px.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-
-            <img src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Cinque Terre"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Forest"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Northern Lights"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Mountains"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/files/PLP-In-grid-Tout-340x411px.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
 
         </div>
 
@@ -458,7 +522,8 @@
                 </div>
                 <div id="skin-rk">
                     <h3 id="cat-h3">Makeup second</h3>
-                    <p id="cat-h3">Products that give you options but never cover you up, turn you into someone else. Because beauty
+                    <p id="cat-h3">Products that give you options but never cover you up, turn you into someone else.
+                        Because beauty
                         should make you feel good</p>
                 </div>
                 <a href="#"><img
@@ -483,12 +548,14 @@
                 </div>
                 <div>
                     <h2 id="h2rk">TIME</h2>
-                    <p id="prk">Allow(s) women to look like the best version of themselves, not an aspirational version of
+                    <p id="prk">Allow(s) women to look like the best version of themselves, not an aspirational version
+                        of
                         someone else</p>
                 </div>
                 <div>
                     <h2 id="h2rk">BOF</h2>
-                    <p id="prk">In an age of online access and trending choice, customer engagement is something that Glossier
+                    <p id="prk">In an age of online access and trending choice, customer engagement is something that
+                        Glossier
                         has gotten right>></p>
                 </div>
             </div>
@@ -500,26 +567,33 @@
             <p>SHOW ALL QUIZES</p>
         </div>
         <div id="scroll-container">
-
-            <img src="https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                alt="Cinque Terre">
-            <img src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                alt="Forest">
-            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=540"
-                alt="Northern Lights">
-            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
-                alt="Mountains">
-            <img src="https://glossier-prod.imgix.net/files/PLP-In-grid-Tout-340x411px.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
-
-            <img src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
-                alt="">
-            <img src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
-                alt="">
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Cinque Terre"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-lashslick-black-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Forest"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Northern Lights"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/files/glossier-cloudpaintduo-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt="Mountains"></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/files/glossier-dewylook-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-penciltrio-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
+                    alt=""></a>
+            <a href="#"><img
+                    src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                    alt=""></a>
 
         </div>
 
@@ -531,26 +605,33 @@
             </div>
 
             <div id="scroll-container">
-
-                <img src="https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                    alt="Cinque Terre">
-                <img src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
-                    alt="Forest">
-                <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=540"
-                    alt="Northern Lights">
-                <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
-                    alt="Mountains">
-                <img src="https://glossier-prod.imgix.net/files/PLP-In-grid-Tout-340x411px.png?auto=compress,format&cs=srgb&w=540"
-                    alt="">
-                <img src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540"
-                    alt="">
-                <img src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
-                    alt="">
-
-                <img src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
-                    alt="">
-                <img src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
-                    alt="">
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+                        alt="Cinque Terre"></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=540"
+                        alt="Forest"></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/files/glossier-boybrow-bdc-futuredew-carousel-01_fb8cc493-42dd-426c-9f3b-7e51a3ee21fc.png?auto=compress,format&cs=srgb&w=540"
+                        alt="Northern Lights"></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
+                        alt="Mountains"></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/files/PLP-In-grid-Tout-340x411px.png?auto=compress,format&cs=srgb&w=540"
+                        alt=""></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=540"
+                        alt=""></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/products/glossier-super-pure-carousel-01_85d96349-189e-4750-808e-f2cef2b2a7ae.png?auto=compress,format&cs=srgb&w=540"
+                        alt=""></a>
+                <a href="#"><img
+                        src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/glossier-mjc-carousel-01.png?v=1680189072&width=200&height=251&crop=center"
+                        alt=""></a>
+                <a href="#"><img
+                        src="https://glossier-prod.imgix.net/products/glossier-superpack-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                        alt=""></a>
 
             </div>
 
@@ -559,29 +640,39 @@
 
 
         <div id="rksetlife">
-            <p> SET IT IN REAL LIFE</p>
-            <h4>Real people show you how they wear Glossier</h4>
+            <p id="lifep"> SET IT IN REAL LIFE</p>
+            <div>
+                <h4 id="lifeh4">Real people show you how they wear Glossier</h4>
+                <p id="rkshift">Share your <span>#yesglossier </span> with the community on social and be sure to tag
+                    <span>@glossier</span> for a chance to be featured in our gallery-and on our Instagram
+                </p>
+            </div>
+
         </div>
+
+
+
+        <div id="rknewimg">
+            <img src="https://glossier-prod.imgix.net/files/glossier-ultralip-pony-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                alt="">
+            <img src="https://glossier-prod.imgix.net/files/glossier-boybrow-browflick-carousel-01_aa6a92b9-46a9-4e05-a676-5965600296d9.png?auto=compress,format&cs=srgb&w=540"
+                alt="">
+            <img src="https://glossier-prod.imgix.net/products/glossier-solarpaint-flare-carousel-02.png?auto=compress,format&cs=srgb&w=540"
+                alt="">
+            <img src="https://glossier-prod.imgix.net/products/glossier-ultralip-catchet-01.png?auto=compress,format&cs=srgb&w=540"
+                alt="">
+        </div>
+        <br>
+        <button id="instabtn">Follow us on Instagram</button>
+
+
+        <br><br><br><br>
+
         <div>
-            <p>Share your <span>#yesglossier </span> with the community on social and be sure to tag
-                <span>@glossier</span> for a chance to be featured in our gallery-and on our Instagram</p>
-        </div>
-
-
-        <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-        <button>Follow us on Instagram</button>
-
-
-
-        <div>
 
 
         </div>
+        
 
     </div>
 
@@ -600,7 +691,13 @@
     })
     let button1 = document.getElementById("btn2");
     //  button.textContent="Shop Makeup";
-    button.addEventListener("click", function () {
+    button1.addEventListener("click", function () {
         window.location.href = "#"
+    })
+
+
+    document.getElementById("instabtn").addEventListener("click", function () {
+        window.location.href = "#"
+
     })
 </script>

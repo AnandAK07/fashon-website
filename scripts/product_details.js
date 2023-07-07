@@ -109,80 +109,38 @@ const data = [
 	},
 ];
 
-const content = document.querySelector(".content");
-data.forEach((elem) => {
-	const cardDiv = document.createElement("div");
-	cardDiv.classList.add("card");
 
-	const image_a = document.createElement("a");
-	const primary_image = document.createElement("img");
-	primary_image.src = `${elem.primary_image}`;
-	image_a.href = `product_details.html/?id=${elem.id}`
-	image_a.appendChild(primary_image);
+const queryString = window.location.search;
+// console.log(queryString);
 
-	const title_price = document.createElement("div");
-	title_price.classList.add("title-price");
-	const title = document.createElement("h3");
-	title.classList.add("title");
-	title.textContent = elem.title;
-	const price = document.createElement("p");
-	price.textContent = `$${elem.price}`
-	price.classList.add("price");
-	title_price.append(title, price);
+const urlparams = new URLSearchParams(queryString);
+const id = urlparams.get("id");
+// console.log(id);
 
-	const desp = document.createElement("p");
-	desp.classList.add("desp");
-	desp.textContent = elem.desc;
+const container = document.querySelector(".container");
+if(id < 1){
+	container.innerHTML = "Cannot get the id"
+}else{
+	container.innerHTML = `<div class="section">
+	<div class="info_section">
+		<div class="title">
+			<h1>${data[id-1].title}</h1>
+		</div>
+		<div class="title-desc">
+			<p>${data[id-1].desc}</p>
+		</div>
+		<div class="btn-addtobag">
+			<button>Add to bag $${data[id-1].price}</button>
+		</div>
+		<div class="desc-title">${data[id-1].long_desc_title}</div>
+		<div class="desc">${data[id-1].long_desc}</div>
+		<div class="uses"><span>Purifying</span><span>Cruelty free</span></div>
+		<div class="info">${data[id-1].uses_test}</div>
 
-	const button = document.createElement("button")
-	button.textContent = "Add to Bag";
-	button.classList.add("addtobag")
-	button.dataset.id = elem.id;
-	button.addEventListener("click", addtocart);
-
-	cardDiv.append(image_a, title_price, desp, button);
-	content.appendChild(cardDiv)
-	
-})
-
-function addtocart(event){
-	const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
-	const button = event.target;
-	let id = button.dataset.id;
-	// console.log(button.dataset.id);
-	console.log(id);
-	let idFound = false;
-	cart_data.forEach((elem) => {
-		if(elem.id ===  id){
-			elem.id = id;
-			elem.quantity = elem.quantity +1;
-			idFound = true
-			
-		}
-	})
-	if(!idFound){
-		const obj = {
-			id: id,
-			quantity: 1,
-		}
-		cart_data.push(obj)
-	}
-	localStorage.setItem("cart_data", JSON.stringify(cart_data));
+	</div>
+	<div class="image-section">
+		<img src="${data[id-1].primary_image}" alt="">
+		<img src="${data[id-1].second_img}" alt="">
+	</div>
+</div>`
 }
-
-
-/* 
-localstorage getitem
-let total = 0
-
-cart_data.forEach((elem)=>{
-	if(elem.id === data.id)
-})
-
-document title change
-price update
-total update
-
-
-
-*/

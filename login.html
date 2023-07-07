@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <nav>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        height: 40px; /* Decreased navbar height */
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid grey;
+    }
+
+    #nav-center {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
+
+    #nav-center a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
+
+    #nav-right {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
+
+    #nav-right a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
+
+    /* Media Query for screens smaller than 600px */
+@media (max-width: 600px) {
+    #navbar {
+        height: 60px; /* Adjusted navbar height for smaller screens */
+    }
+    
+    #nav-center {
+      margin-right: 15px; /* Decreased margin for smaller screens */
+        font-size: 10px; /* Decreased font size for smaller screens */
+        margin:auto;
+    }
+    
+    #nav-right {
+        margin-right: 15px; /* Decreased margin for smaller screens */
+        font-size: 10px; /* Decreased font size for smaller screens */
+    }
+}
+
+</style>
+<body>
+    <nav id="navbar">
+        <div id="nav-left">
+            <h1>Glossier.</h1>
+        </div>
+        <!-- <div id="head">SKINCARE
+            <div id="menu">
+                <div id="box">
+                <div id="holder">
+                    <div id="head-list">
+                        <a href="#">Shop All</a>
+                        <a href="#">Bestseller</a>
+                        <br><br>
+                        <a id="new" href="#">NEW</a>
+                        <a href="#">Boy Brow</a>
+                        <a href="#">Limited Edition Embroidered Cream Hoodie</a>
+                        <a href="#">Cloud Paint in Wisp and Soar</a>
+                    </div>
+                    <div id="head-list">
+                        <a href="#">All skincare</a>
+                        <a href="#">Cleansers</a>
+                        <a href="#">Balms</a>
+                        <a href="#">Treatments</a>
+                        <a href="#">Sunscreen</a>
+                        <a href="#">Moisturizers</a>
+                        <a href="#">Save with sets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="nav-center">
+        <a href="">SKINCARE</a>
+        <a href="">makeup</a>
+        <a href="">body</a>
+        <a href="">fragrance</a>
+        <a href="">glossiwear</a>
+        <a href="">sets</a>
+    </div>
+
+    <div id="nav-right">
+        <a href="">stories</a>
+        <a href="">search</a>
+        <a href="">login</a>
+        <a href="">bags <span id="count">(0)</span></a>
+    </div>
+  </nav>
+  <div class="container">
+    <form id="loginForm">
+      <h2>Login</h2>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email Address" required>
+        <span class="input-info" id="emailError"></span>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="input-info" id="passwordError"></span>
+      </div>
+      <div class="forgot-password">
+        <a href="#">Forgot your Password?</a>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-secondary">Create an Account</button>
+      </div>
+      <p id="errorMessage"></p>
+    </form>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

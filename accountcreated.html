@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Created</title>
+  <link rel="stylesheet" href="accountcreated.css">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        height: 40px; /* Decreased navbar height */
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid grey;
+    }
+
+    #nav-center {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
+
+    #nav-center a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
+
+    #nav-right {
+        text-transform: uppercase;
+        margin-right: 30px; /* Increased margin */
+        font-size: 12px; /* Decreased font size */
+    }
+
+    #nav-right a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px; /* Add space between center items */
+        font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div id="nav-left">
+      <h1>Glossier.</h1>
+    </div>
+    
+    <div id="nav-center">
+      <a href="">SKINCARE</a>
+      <a href="">makeup</a>
+      <a href="">body</a>
+      <a href="">fragrance</a>
+      <a href="">glossiwear</a>
+      <a href="">sets</a>
+    </div>
+
+    <div id="nav-right">
+      <a href="">stories</a>
+      <a href="">search</a>
+      <a href="">login</a>
+      <a href="">bags <span id="count">(0)</span></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Account Created Successfully</h2>
+    <p>Your account has been successfully created.</p>
+    <p>You can now <a href="login.html">sign in</a> to access your account.</p>
+  </div>
+</body>
+</html>

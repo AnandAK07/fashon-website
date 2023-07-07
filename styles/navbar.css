@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    height: 40px; /* Decreased navbar height */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+#nav-center {
+    text-transform: uppercase;
+    margin-right: 30px; /* Increased margin */
+    font-size: 12px; /* Decreased font size */
+}
+
+#nav-center a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px; /* Add space between center items */
+    font-size: 12px;
+}
+
+#nav-right {
+    text-transform: uppercase;
+    margin-right: 30px; /* Increased margin */
+    font-size: 12px; /* Decreased font size */
+}
+
+#nav-right a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px; /* Add space between center items */
+    font-size: 12px;
+}

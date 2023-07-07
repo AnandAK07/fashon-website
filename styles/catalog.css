@@ -1,0 +1,105 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	top: 100px;
+	position: absolute;
+	font-family: Apercu,Gill Sans,sans-serif;
+    font-weight: 400;
+}
+
+.options{
+	position: fixed;
+	top: 39px;
+	height: 2.5rem;
+	background-color: #e8e8e8;
+	width: 100%;
+}
+
+.sortOption{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 25px;
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+}
+
+.sortOption label{
+	margin-right: 10px;
+}
+
+.sortOption select{
+	background-color: inherit;
+	outline: none;
+	border: none;
+	list-style: none;
+	width: 107px;
+	cursor: pointer;
+	
+}
+
+.content{
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	/* max-width: 1440px; */
+	justify-content: center;
+	/* margin: auto; */
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 0 1 24%;
+	/* padding: 9px; */
+}
+
+.card img{
+	width: 100%;
+}
+
+.title-price{
+	display: flex;
+	justify-content: space-between;
+}
+
+.title-price h3{
+	margin-top: 0;
+	color: #000;
+	font-size: 0.875rem;
+	line-height: 1.225rem;
+	margin-left: 5px;
+}
+
+.price{
+	font-weight: 400;
+	box-sizing: border-box;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.desp{
+	margin-bottom: 0;
+	color: #666;
+	font-size: 0.875rem;
+	line-height: 1.225rem;
+	margin-left: 5px;
+}
+
+.addtobag{
+	padding: 0.5rem 1rem;
+	color: #000;
+	text-align: center;
+	min-height: 2.5rem;
+	transition: font-size .4s, ease-in-out;
+	font-family: Apercu,Gill Sans,sans-serif;
+	background-color: white;
+	outline: none;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	cursor: pointer;
+	margin-top: 0.5rem;
+}

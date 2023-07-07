@@ -38,7 +38,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: rgba(0,0,0,0.5); */
     z-index: 1;
     display: none;
     opacity: 0;
@@ -71,7 +71,18 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+.cartS{
+    display: flex;
+    flex-direction: row;
+    background-color:#f6f6f7 ;
+    
+}
+.mul{
+    color: #2f2e2f;
+}
+.cartS:first-child{
+    align-items: center;
+}
 /* Cart Header */
 .cart_header{
     padding: 1rem;
@@ -83,17 +94,19 @@ body{
 
 .header_title{
     position: relative;
+    display: flex;
+    
 }
 
 .header_title span{
-    position: absolute;
+    /* position: absolute;
     top: -5px;
     right: -20px;
     width: 20px;
     height: 20px;
     background-color: var(--accent-color);
     border-radius: 50%;
-    color: #fff;
+    color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,15 +134,18 @@ body{
     min-height: 150px;
     display: flex;
     border-bottom: 1px solid var(--light-gray);
+    align-items: center;
+    gap: 5px;
 }
 
+
 .remove_item{
-    position: absolute;
+    /* position: absolute; */
     top: 10px;
     right: 10px;
     width: 20px;
-    height: 20px;
-    background-color: #ccc;
+    /* height: 20px;
+    background-color: #ccc; */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -169,22 +185,26 @@ body{
     display: flex;
     align-items: center;
     gap: 1rem;
+    background-color: #fff;
+    margin-bottom: 5px;
 }
 
 .item_details .qty span{
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 50%;
+    /* width: 30px;
+    height: 30px; */
+    /* background-color: #fff;
+    border-radius: 50%; */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     line-height: 1;
     cursor: pointer;
-    box-shadow: 3px 3px 5px var(--light-gray),-1px -1px 2px var(--light-gray);
+    /* box-shadow: 3px 3px 5px var(--light-gray),-1px -1px 2px var(--light-gray); */
     user-select: none;
     transition: scale 0.2s ease;
+    padding: 0 5px 0 5px;
+    
 }
 
 .item_details .qty span:hover{
@@ -222,12 +242,15 @@ body{
     border:none;
     background-color: #000;
     color:#fff;
-    border-radius: 15px;
     padding: 10px;
     letter-spacing: 2px;
     cursor: pointer;
 }
 
 .cart_actions button:nth-of-type(2){
-    background-color: var(--accent-color);
+    background-color:#3e4247
+}
+#delP{
+    font-size: 30px;
+    color: #f1f0f0;
 }

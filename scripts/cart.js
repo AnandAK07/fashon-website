@@ -296,7 +296,7 @@ productType:"mansclothing",
 
 // displayCart(cartData);
 
-let cart_data=[]
+let cart_data=JSON.parse(localStorage.getItem("cartPage"))||[]
 
 const openBtn=document.getElementById('open_cart_btn')
 const cart=document.getElementById('side_cart')
@@ -305,7 +305,9 @@ const backdrop=document.querySelector('.backdrop')
 const itemsEl=document.querySelector('.items')
 const cartItems=document.querySelector('.cart_items')
 const itemsNum=document.getElementById('items_num')
+const itemsNums=document.getElementById('items_nums')
 const subtotalPrice=document.getElementById('subtotal_price')
+const checkout=document.getElementById('checkout')
 
 renderItems()
 renderCartItems()
@@ -355,9 +357,9 @@ function renderItems(){
   ITEMS.forEach((item,idx)=>{
     const itemEl=document.createElement('div')
     itemEl.classList.add('items')
-    itemEl.onclick=()=>addItem(idx,item.id)
+    
     itemEl.innerHTML=`<img src="${item.image_url}" alt="">
-    <button>Add to Cart</button>`
+    <button onclick="addItem(${idx},${item.id})">Add to Cart</button>`
     itemsEl.appendChild(itemEl)
   })
 }
@@ -385,16 +387,18 @@ function calcItemsNum(){
 
   cart_data.forEach((item)=>(itemsCount+=item.qty))
 
-  itemsNum.innerText=itemsCount
+  itemsNums.innerText=`(${itemsCount} items)`
 }
 
 // Calculate Subtotal Price
 function calcSubtotalPrice(){
   let subtotal=0
+  checkout.innerText=''
 
   cart_data.forEach((item)=>(subtotal+=item.price*item.qty))
 
   subtotalPrice.innerText=subtotal
+  checkout.innerText=`$${subtotal} - Checkout`
 }
 
 //Display /Render Cart Items
@@ -402,27 +406,40 @@ function calcSubtotalPrice(){
 function renderCartItems(){
   //remove everything from cart
   cartItems.innerHTML=''
+
+    if(cart_data.length>0){
+      let mid=document.createElement('div')
+      let notify=document.createElement('h5')
+      notify.innerText='Congrats! You get free standard shopping'
+      let lin=document.createElement('hr')
+      mid.append(notify,lin);
+      cartItems.append(mid)
+    }
+    
+
   //add new data
   cart_data.forEach((item,i)=>{
     const cartItem=document.createElement('div')
     cartItem.classList.add('cart_item')
     cartItem.innerHTML=
-    `
-        <div onclick="removeCartItem(${item.id})" class="remove_item">
-            <span id="delP">&times;</span>
-        </div>
-        <div class="item_img">
-            <img src="${item.image_url}" alt="">
-        </div>
-        <div class="item_details">
-            <p>${item.name}</p>
-            <strong>${item.price}</strong>
-            <div class="qty">
-                <span onclick="decreaseQty(${item.id})">-</span>
-                <strong>${item.qty}</strong>
-                <span onclick="increaseQty(${item.id})">+</span>
-            </div>
-        </div>
+    `   
+    <div class="mul" onclick="removeCartItem(${item.id})" class="remove_item">
+        <span id="delP">&times;</span>
+    </div>
+    <div class="cartS">
+      <div class="item_img">
+          <img src="${item.image_url}" alt="">
+      </div>
+      <div class="item_details">
+          <p>${item.name}</p>
+          <strong>$${item.price}</strong>
+          <div class="qty">
+              <span onclick="decreaseQty(${item.id})">-</span>
+              <strong>${item.qty}</strong>
+              <span onclick="increaseQty(${item.id})">+</span>
+          </div>
+      </div>
+    </div>
     `
     cartItems.appendChild(cartItem)
     

@@ -4,398 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>glossier.com</title>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Gossier</title>
 </head>
-<style>
-    body {
-        margin: 0px;
-    }
-
-    #main {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-    }
-
-    #navbar {
-        position: absolute;
-        font-size: 16px;
-        font-weight: 450;
-        letter-spacing: normal;
-        left: 0;
-        right: 0;
-        display: flex;
-        max-width: 2500px;
-        width: 100%;
-        padding: 0;
-        background-color: rgb(0, 0, 0, 0.2);
-        margin: auto;
-        z-index: 1;
-
-    }
-
-
-    #bg_img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        box-sizing: border-box;
-        padding: 0;
-        border: none;
-        margin: auto;
-        display: block;
-        width: 0;
-        height: 0;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 100%;
-        max-height: 100%;
-
-
-    }
-
-    #bg_img img {
-        width: 100%;
-        height: 100%;
-    }
-
-    #logo {
-        width: 21.6%;
-        margin: 2.1% 0% 2% 16.5%;
-    }
-
-    .link-btn {
-        color: #ffffff;
-        text-decoration: none;
-        line-height: 23px;
-    }
-
-    #text_bg {
-        position: absolute;
-        display: flex;
-        z-index: 1;
-        justify-content: center;
-        color: rgb(255, 255, 255);
-        max-width: 40%;
-        bottom: 30vh;
-        left: 12vh;
-    }
-
- 
-
-    #bgShadow {
-        opacity: 0.9;
-        display: flex;
-        flex-direction: column;
-
-
-    }
-
-
-    #text_bg {
-        font-size: 300px;
-    }
-
-    #bg_desc {
-        color: white;
-        width: 40%;
-    }
-
-
-    #glossier_bg img {
-        width: 100%;
-        height: 100%;
-
-    }
-
-    #rksec {
-        display: flex;
-        /* gap: 50px; */
-        justify-content: space-between;
-        font-family: sans-serif;
-        width: 95%;
-    }
-
-    #subsec {
-        font-size: 50px;
-    }
-
-    #subsecp {
-        min-width: 110%;
-    }
-
-    #rksec2 {
-        width: 38%;
-    }
-
-    #sec-two {
-        /* border: 2px solid blue; */
-        width: 60%;
-    }
-
-    #main-center {
-        width: 70%;
-        /* border: 2px solid red; */
-        margin-left: 13%;
-
-    }
-
-    #rkdet {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 12px;
-
-    }
-
-    #img-flex {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        /* border: 1px solid red; */
-
-    }
-
-    #img_gallery {
-        position: relative;
-        width: 100%;
-        min-width: 200px;
-        /* border: 1px solid blueviolet; */
-
-    }
-
-    #img_gallery img {
-        width: 100%;
-        height: 600px;
-        /* border: 1px solid yellow; */
-    }
-
-    #img_gallery #btn2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: white;
-        color: black;
-        font-size: 16px;
-        padding: 12px 24px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
-    }
-
-    #img_gallery #btn1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        background-color: white;
-        color: black;
-        font-size: 16px;
-        padding: 12px 24px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        text-align: center;
-
-    }
-
-    #rkbest {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-
-    }
-
-    #our-best {
-        text-decoration: none;
-        color: grey;
-        font-size: 12px;
-    }
-
-    #rkbestseller {
-        /* text-decoration: none; */
-        color: grey;
-        font-size: 12px;
-    }
-
-    #scroll-container {
-        background-color: white;
-        overflow: auto;
-        white-space: nowrap;
-        /* padding: 10px; */
-    }
-
-    #scroll-container img {
-        padding: 2px;
-        width: 24%;
-        height: auto;
-    }
-
-    #scroll-container a img {
-        padding: 2px;
-        width: 24%;
-        height: auto;
-    }
-
-    #rkimggrid p {
-        font-size: 12px;
-    }
-
-    #main-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
-        height: auto;
-        /* border: 1px solid red; */
-    }
-
-    #main-grid a img {
-        max-width: 100%;
-        /* border: 1px solid red; */
-    }
-
-    #skin-rk {
-        max-width: 100%;
-
-    }
-
-    #skin-rk h3,
-    p {
-        padding: 10px;
-        width: 55%;
-
-    }
-
-    #rkquote {
-        display: flex;
-        flex-direction: column;
-        line-height: normal;
-    }
-
-    #quotep {
-        font-size: 12px;
-
-    }
-
-    #quote2 {
-        display: flex;
-        flex-direction: row;
-        min-width: 100%;
-
-
-
-    }
-
-    #quote2 div {
-        max-width: 33%;
-    }
-
-    #prk {
-        width: 100%;
-        /* line-height: 10px; */
-    }
-
-    #h2rk {
-        padding-left: 10px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 30px;
-        line-height: 10px;
-    }
-
-    #quiz {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        /* border: 1px solid rgb(121, 121, 28); */
-
-
-    }
-
-    #quiz p {
-        justify-content: space-between;
-        font-size: 12px;
-        text-decoration: underline;
-    }
-
-
-    #rkset {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #rkset p {
-        font-size: 12px;
-        text-decoration: underline;
-        display: block;
-        /* margin-left: 100px; */
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    #rksetlife {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #lifeh4{
-        font-size: 20px;
-    }
-
-    #lifep {
-        font-size: 12px;
-        color: rgb(71, 69, 69);
-        /* margin-top: 50px;  */
-    }
-
-    #rksetlife div {
-        margin-top: 100px;
-    }
-
-    /* #lifeh4{
-        margin-right: 100px;
-        
-    } */
-    /* #rkshift{
-        display: block;
-        border: 1px solid red;
-    } */
-
-
-    #rknewimg {
-        display: flex;
-        flex-direction: row;
-        min-width: 100%;
-        height: auto;
-    }
-
-    #rknewimg img {
-        width: 25%;
-    }
-
-    #instabtn {
-        background-color: black;
-        color: white;
-        border-radius: 5px;
-        float: right;
-        }
-</style>
 
 <body>
     <div id="main">
 
-        <div id="navbar_container"></div>
+        <div id="navbar-import"></div>
 
 
         <div id="bg_img">
@@ -663,17 +281,28 @@
 
 
         </div>
-        
+
 
     </div>
 
 
-
+    <div id="footer-import"></div>
 
 </body>
 
 </html>
 <script type="module">
+    import navbar from "./components/navbar.js";
+    import footer from "./components/footer.js";
+
+
+    let navbars = document.getElementById("navbar-import");
+
+    navbars.innerHTML = navbar();
+
+    let footers = document.getElementById("footer-import");
+
+    footers.innerHTML = footer();
 
     let button = document.getElementById("btn1");
     //  button.textContent="Shop Makeup";

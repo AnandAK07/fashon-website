@@ -17,6 +17,20 @@ body{
 	width: 100%;
 }
 
+.searchInp{
+	display: flex;
+	justify-content: center;
+	/* flex-grow: 1; */
+	margin-bottom: 20px;
+	width: 100%;
+	
+}
+.searchInp input{
+	width: 30%;
+	height: 20px;
+	padding: 5px;
+}
+
 .sortOption{
 	display: flex;
 	justify-content: flex-end;

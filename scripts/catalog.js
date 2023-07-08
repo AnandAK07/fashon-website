@@ -108,59 +108,47 @@ const data = [
 		uses_test: "Dermatologist tested, formulated without fragrance",
 	},
 ];
-let cartData=JSON.parse(localStorage.getItem('cartData')) || []
-const content = document.querySelector(".content");
-data.forEach((elem) => {
-	const cardDiv = document.createElement("div");
-	cardDiv.classList.add("card");
 
-	const image_a = document.createElement("a");
-	const primary_image = document.createElement("img");
-	primary_image.src = `${elem.primary_image}`;
-	image_a.href = `product_details.html/?id=${elem.id}`
-	image_a.appendChild(primary_image);
-
-	const title_price = document.createElement("div");
-	title_price.classList.add("title-price");
-	const title = document.createElement("h3");
-	title.classList.add("title");
-	title.textContent = elem.title;
-	const price = document.createElement("p");
-	price.textContent = `$${elem.price}`
-	price.classList.add("price");
-	title_price.append(title, price);
-
-	const desp = document.createElement("p");
-	desp.classList.add("desp");
-	desp.textContent = elem.desc;
-
-	const button = document.createElement("button")
-	button.textContent = "Add to Bag";
-	button.classList.add("addtobag")
-	button.dataset.id = elem.id;
-	button.addEventListener("click", addtocart)
-		// if(check(elem.title, elem.id, elem.desc)==true){
-		// 	alert('item already in cart')
-		// }else{
-		// 	cartData.push(elem);
-		//     localStorage.setItem('cartData', JSON.stringify(cartData));
-		// }
-	// });
-
-	cardDiv.append(image_a, title_price, desp, button);
-	content.appendChild(cardDiv)
+async function renderPage(){
+	let response  = await fetch("http://localhost:3000/data");
+	let data = await response.json();
+	const content = document.querySelector(".content");
+	data.forEach((elem) => {
+		const cardDiv = document.createElement("div");
+		cardDiv.classList.add("card");
 	
-})
-// function check(name, id, desc){
-// 	let checkedVal=cartData.filter(function(elem){
-// 		return elem.title==name || elem.id==id || elem.desc==desc
-// 	})
-// 	if(checkedVal!=0){
-// 		return true;
-// 	}else{
-// 		return false;
-// 	}
-// }
+		const image_a = document.createElement("a");
+		const primary_image = document.createElement("img");
+		primary_image.src = `${elem.primary_image}`;
+		image_a.href = `product_details.html/?id=${elem.id}`
+		image_a.appendChild(primary_image);
+	
+		const title_price = document.createElement("div");
+		title_price.classList.add("title-price");
+		const title = document.createElement("h3");
+		title.classList.add("title");
+		title.textContent = elem.title;
+		const price = document.createElement("p");
+		price.textContent = `$${elem.price}`
+		price.classList.add("price");
+		title_price.append(title, price);
+	
+		const desp = document.createElement("p");
+		desp.classList.add("desp");
+		desp.textContent = elem.desc;
+	
+		const button = document.createElement("button")
+		button.textContent = "Add to Bag";
+		button.classList.add("addtobag")
+		button.dataset.id = elem.id;
+		button.addEventListener("click", addtocart);
+	
+		cardDiv.append(image_a, title_price, desp, button);
+		content.appendChild(cardDiv)
+		
+	})
+}
+
 
 function addtocart(event){
 	const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
@@ -188,3 +176,22 @@ function addtocart(event){
 }
 
 
+function debounce(func, timeout = 300){
+	let timer;
+	return (...args) => {
+	  clearTimeout(timer);
+	  timer = setTimeout(() => { func.apply(this, args); }, timeout);
+	};
+  }
+	
+async function saveInput(){
+	let searchData = document.querySelector("#search").value;
+	if(searchData < 1){
+		renderPage();
+	}else{
+		console.log("sheeesh");
+	}
+}
+  
+const processChanges = debounce(() => saveInput());
+renderPage();

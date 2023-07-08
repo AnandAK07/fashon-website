@@ -5,6 +5,7 @@
     height: 200px;
     display: flex;
     flex-direction: row;
+    padding: 20px;
     
 
 }
@@ -79,9 +80,11 @@
 
 
 }
-#rksocialid a>img{
+#rksocialid a{
     width: 15px;
     height: 15px;
+    text-decoration: none;
+    color: white;
 
 }
 #glossbtn{

@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 #navbar {
-    position: absolute;
+    position: fixed;
     font-size: 16px;
     font-weight: 450;
     letter-spacing: normal;
@@ -16,6 +16,7 @@ body {
     background-color: rgb(0, 0, 0, 0.2);
     margin: auto;
     z-index: 1;
+    top: 0;
 
 }
 
@@ -33,6 +34,9 @@ body {
     text-transform: uppercase;
     margin-right: 30px; /* Increased margin */
     font-size: 12px; /* Decreased font size */
+}
+#menurk{
+    display: none;
 }
 
 #nav-center a {
@@ -57,3 +61,9 @@ body {
     margin-right: 15px; /* Add space between center items */
     font-size: 12px;
 }
+    /* Media Query for screens smaller than 600px */
+    /* @media only screen and (min-width:100px) and (max-width:700px){
+        #navbar{
+            max-width: max-content;
+        }
+    } */

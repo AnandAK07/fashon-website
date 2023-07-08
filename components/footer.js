@@ -8,7 +8,7 @@ function footer(){
                 </div>
                 <br>
                 <div id="rklist">
-                    <a href="#">About us </a>
+                    <a href="https://www.glossier.com/pages/about">About us </a>
                     <a href="#">Stores</a>
                     <a href="#">Careers</a>
                     <a href="#">Blog</a>
@@ -47,10 +47,10 @@ function footer(){
         </div>
         <div id="glossbottom">
             <div id="rksocialid">
-                <a href="#"><img id="i1" src="./images/images (2).png" alt="facebook"></a>
-                <a href="#"><img id="i2" src="./images/images.png" alt="instagram"></a>
-                <a href="#"><img id="i3" src="./images/images (1).png" alt="youtube"></a>
-                <a href="#"><img id="i4" src="./images/download.png" alt="twitter"></a>
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
                 
             </div>
             <div id="glossbtn">

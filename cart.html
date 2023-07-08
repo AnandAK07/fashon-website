@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="styles/cart.css">
-</head>
-<body>
-    <nav> Navbar hear</nav>
-    <!-- Open Btn -->
-    <button id="open_cart_btn">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAS4AAACnCAMAAACYVkHVAAAAkFBMVEX39/cDBwoAAAAGBgb7+/v19fXa2trBw8TNzc0GBQr////BwsUDBwbz8/Ofn58FCQzm5epvb2/t7e23ubzQ1NP7+v+hoaXl5eUsLCzKysqWlpYUFBTn5+dQUFBLS0uampp5eXlhYWE7OzscHBxYWFiCgoJ9gIMiJiogICCnp6dCQkNfX1+Li4uysrIzMzNNTU2e3zwQAAAEzUlEQVR4nO3bDVPiSBSF4XBzG6Q1ZgnMgBEUVFRcdP7/v9v+COiUknBmdheGnLccqxy7KPJUp9NATBLGGGOMMcYYY4yx1qdqrfuy4bu6n01iDv2cjjRjteiVg7trcaV3g7I3tYke+lkdaWrHlzPZlobvN7djVU6vnzJGjdrRwPH005/yYouRVU6xD2litLtwVnnH99Gr0+mLzLpuhOEcqzKqpUi0+sTVyXORMkvIVaU6nvmZ5bwC2fvylaa5ywHKy9idjwTzOwXt3ktazSx36snkYb5czhcTL5bncb6JjOgV0jM3j+KZKHL/eF74DZf/l12tHVl1eor0LLXcRbGb+7MuzZ3IzdCErWmYRkYTm/VuHFj4tZtfh36yB8+xZE9+kffz53r4eU+qOnyuzlS5Lg7xFI8rHcRLYiqL4qvdlbHZQOK6Jg+t337pq8SLn6zDXvTTDt79p72NK34qq7YvX9nET528I6XdNcTtyr5L5Lov2n1xdBMn7ERlrtlOiCyxjxK3E+t2vxwy9+GqKC8Nw3QmuXeV7P95XkeZSYYSX0mP6ieNSboSpqGs2ju7TGIf4uQaNCBkic4j183OJe70M8V+k8ul47C/z2Xa3sVee3Fy3djmtxvs32H3JUNt7VsTuo5cqz3eL3UbtMD12N73VjdLV3ef9Xssfc81s609G7M3zyWTvY5f3/z0kqdCW7qZ0GkauH7sc7UzYfHK+ye91pvduaOeVtsIm9UNrIbbZVy8xnWPeujj/Z1MkmlNxm0OAtfSmrpxmy4jl1voagYd+ph/p+Lq6mxX7lfjiqvU7s5h7224rszuB/WP+8eubNqV2oZ/Sb/fT+XSLuoHhr59j1yjUf24vS6zx5jj6tRUcfUd12D70cbX+VEbrrORXFxc7Bi4767kGCMXFLmgyAX133CNyNXE5T+V3W4kuhLvnSDXPlzuZGwn1/kHrrxupFdIbatnVy5P3yquWzuqdQ0Kqy2Xn4ut4+rI6zuXLuq9UrlOtmuXjlrJ1dXqRdBq8/K5hmth/duped6XserzzqXuRLn82u2Oe+1f5L0ViV01cQ2sMeGGr7kaO2kfVypnarR8mwymmmjZxPXDalIMnidlYrS4biPXWhNj481cetfEJVP/Wbbx75LpsHVrV7gdsIh3Txr/KU/jvmup1c28mb60kSuVWdDKVKtP9Ou4Unm1wUvtsn37rvjh9d2Z/9uf5FUadqlRd535W1bHC8l3ap0qV0zk5bGcV7frNib5oCwf6gefNFceb6FvmFrb/E3kzdv/0+UKf3aQ76vlBjeOPXGufztykYtcX0UuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5MIiF1RXDtCfy1X0fOfha9POn84bf2p8iFBx6KP+9fQAHfqYGWOMMcYYY4wx1tw/0hV0LWzJgr4AAAAASUVORK5CYII=" style="width: 30px;" alt="">
-    </button>
-    <!-- items -->
-    <div class="items"></div>
-    <!-- backdrop -->
-    <div class="backdrop"></div>
-    <!-- Side Cart -->
-    <div id="side_cart" class="side_cart">
-        <div class="cart_content">
-            <!-- Cart Header -->
-            <div class="cart_header">
-                <!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAS4AAACnCAMAAACYVkHVAAAAkFBMVEX39/cDBwoAAAAGBgb7+/v19fXa2trBw8TNzc0GBQr////BwsUDBwbz8/Ofn58FCQzm5epvb2/t7e23ubzQ1NP7+v+hoaXl5eUsLCzKysqWlpYUFBTn5+dQUFBLS0uampp5eXlhYWE7OzscHBxYWFiCgoJ9gIMiJiogICCnp6dCQkNfX1+Li4uysrIzMzNNTU2e3zwQAAAEzUlEQVR4nO3bDVPiSBSF4XBzG6Q1ZgnMgBEUVFRcdP7/v9v+COiUknBmdheGnLccqxy7KPJUp9NATBLGGGOMMcYYY4yx1qdqrfuy4bu6n01iDv2cjjRjteiVg7trcaV3g7I3tYke+lkdaWrHlzPZlobvN7djVU6vnzJGjdrRwPH005/yYouRVU6xD2litLtwVnnH99Gr0+mLzLpuhOEcqzKqpUi0+sTVyXORMkvIVaU6nvmZ5bwC2fvylaa5ywHKy9idjwTzOwXt3ktazSx36snkYb5czhcTL5bncb6JjOgV0jM3j+KZKHL/eF74DZf/l12tHVl1eor0LLXcRbGb+7MuzZ3IzdCErWmYRkYTm/VuHFj4tZtfh36yB8+xZE9+kffz53r4eU+qOnyuzlS5Lg7xFI8rHcRLYiqL4qvdlbHZQOK6Jg+t337pq8SLn6zDXvTTDt79p72NK34qq7YvX9nET528I6XdNcTtyr5L5Lov2n1xdBMn7ERlrtlOiCyxjxK3E+t2vxwy9+GqKC8Nw3QmuXeV7P95XkeZSYYSX0mP6ieNSboSpqGs2ju7TGIf4uQaNCBkic4j183OJe70M8V+k8ul47C/z2Xa3sVee3Fy3djmtxvs32H3JUNt7VsTuo5cqz3eL3UbtMD12N73VjdLV3ef9Xssfc81s609G7M3zyWTvY5f3/z0kqdCW7qZ0GkauH7sc7UzYfHK+ye91pvduaOeVtsIm9UNrIbbZVy8xnWPeujj/Z1MkmlNxm0OAtfSmrpxmy4jl1voagYd+ph/p+Lq6mxX7lfjiqvU7s5h7224rszuB/WP+8eubNqV2oZ/Sb/fT+XSLuoHhr59j1yjUf24vS6zx5jj6tRUcfUd12D70cbX+VEbrrORXFxc7Bi4767kGCMXFLmgyAX133CNyNXE5T+V3W4kuhLvnSDXPlzuZGwn1/kHrrxupFdIbatnVy5P3yquWzuqdQ0Kqy2Xn4ut4+rI6zuXLuq9UrlOtmuXjlrJ1dXqRdBq8/K5hmth/duped6XserzzqXuRLn82u2Oe+1f5L0ViV01cQ2sMeGGr7kaO2kfVypnarR8mwymmmjZxPXDalIMnidlYrS4biPXWhNj481cetfEJVP/Wbbx75LpsHVrV7gdsIh3Txr/KU/jvmup1c28mb60kSuVWdDKVKtP9Ou4Unm1wUvtsn37rvjh9d2Z/9uf5FUadqlRd535W1bHC8l3ap0qV0zk5bGcV7frNib5oCwf6gefNFceb6FvmFrb/E3kzdv/0+UKf3aQ76vlBjeOPXGufztykYtcX0UuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5IIiFxS5oMgFRS4ockGRC4pcUOSCIhcUuaDIBUUuKHJBkQuKXFDkgiIXFLmgyAVFLihyQZELilxQ5MIiF1RXDtCfy1X0fOfha9POn84bf2p8iFBx6KP+9fQAHfqYGWOMMcYYY4wx1tw/0hV0LWzJgr4AAAAASUVORK5CYII=" style="width: 30px;" alt=""> -->
-                <div class="header_title">
-                    <h2>Your bag</h2>
-                    <span id="items_num"><h2 id="items_nums">(0 items)</h2></span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Cart Page</title>
+    </head>
+    <body>
+        <div class="bg-gray-100 pt-20">
+          <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
+          <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0 js-subtotal">
+            <div class="rounded-lg md:w-2/3 js-card">
+                <!-- card start -->
+              <!-- <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+                <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product-image" class="w-full rounded-lg sm:w-40" />
+                <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+                  <div class="mt-5 sm:mt-0">
+                    <h2 class="text-lg font-bold text-gray-900">Nike Air Max 2019</h2>
+                    <p class="mt-1 text-xs text-gray-700">36EU - 4US</p>
+                  </div>
+                  <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                    <div class="flex items-center border-gray-100">
+                      <button class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </button>
+                      <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
+                      <button class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </button>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <p class="text-sm">259.000 ₭</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <span id="close_btn" class="close_btn">&times;</span>
+              </div> -->
+              <!-- card end -->
+              <!-- <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
+                <img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80" alt="product-image" class="w-full rounded-lg sm:w-40" />
+                <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+                  <div class="mt-5 sm:mt-0">
+                    <h2 class="text-lg font-bold text-gray-900">Nike Air Max 2019</h2>
+                    <p class="mt-1 text-xs text-gray-700">36EU - 4US</p>
+                  </div>
+                  <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
+                    <div class="flex items-center border-gray-100">
+                      <span class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
+                      <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
+                      <span class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <p class="text-sm">259.000 ₭</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
             </div>
-            <!-- Cart Items -->
-            <div class="cart_items">
-                
-            </div>
+            <!-- Sub total -->
             
-            <!-- Cart Actions -->
-            <div class="cart_actions">
-                <div class="subtotal">
-                    <p>SUBTOTAL</p>
-                    <p>$<span id="subtotal_price">0</span></p>
+            <div class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
+              <div class="mb-2 flex justify-between">
+                <p class="text-gray-700">Subtotal</p>
+                <p class="text-gray-700">$129.99</p>
+              </div>
+              <div class="flex justify-between">
+                <p class="text-gray-700">Shipping</p>
+                <p class="text-gray-700">$4.99</p>
+              </div>
+              <hr class="my-4" />
+              <div class="flex justify-between">
+                <p class="text-lg font-bold">Total</p>
+                <div class="">
+                  <p class="mb-1 text-lg font-bold">$134.98 USD</p>
+                  <p class="text-sm text-gray-700">including VAT</p>
                 </div>
-                <button>View Cart</button>
-                <button id="checkout">Checkout</button>
+              </div>
+              <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
             </div>
+            <!-- subtotal end -->
+          </div>
         </div>
-    </div>
-</body>
-<script src="scripts/cart.js"></script>
+      </body>
+      <script src="scripts/cart.js"></script>
 </html>

@@ -188,18 +188,3 @@ function check(name, id, desc){
 // }
 
 
-/* 
-localstorage getitem
-let total = 0
-
-cart_data.forEach((elem)=>{
-	if(elem.id === data.id)
-})
-
-document title change
-price update
-total update
-
-
-
-*/

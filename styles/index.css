@@ -1,5 +1,7 @@
 body {
     margin: 0px;
+    background-color: rgba(204, 200, 200, 0.751);
+
 }
 
 #main {
@@ -223,8 +225,9 @@ body {
 }
 
 #scroll-container {
+
     background-color: white;
-    overflow: auto;
+    overflow-x: scroll;
     white-space: nowrap;
     /* padding: 10px; */
 }

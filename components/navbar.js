@@ -5,18 +5,18 @@ function navbar(){
     </div>
     
     <div id="nav-center">
-      <a href="">SKINCARE</a>
-      <a href="">makeup</a>
-      <a href="">body</a>
-      <a href="">fragrance</a>
-      <a href="">glossiwear</a>
-      <a href="">sets</a>
+      <a href="./catalog.html">SKINCARE</a>
+      <a href="./catalog.html">makeup</a>
+      <a href="./catalog.html">body</a>
+      <a href="./catalog.html">fragrance</a>
+      <a href="./catalog.html">glossiwear</a>
+      <a href="./catalog.html">sets</a>
     </div>
 
     <div id="nav-right">
       <a href="">stories</a>
-      <a href="">search</a>
-      <a href="">login</a>
+      <a href="./search.html">search</a>
+      <a href="./login.html">login</a>
       <a href="">bags <span id="count">(0)</span></a>
     </div>
   </nav>`

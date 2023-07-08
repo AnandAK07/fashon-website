@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/catalog.css">
-        <title>Catalog</title>
-    </head>
-    <body>
-		<!-- navbar -->
-		<div class="navbar"></div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="styles/catalog.css">
+	<link rel="stylesheet" href="styles/navbar.css">
+	<link rel="stylesheet" href="styles/footer.css">
+
+	<title>Catalog</title>
+</head>
+
+<body>
+	<!-- navbar -->
+	<div id="navbar-import"></div>
 
 
-		<!-- filter options -->
-		<div class="options">
-			<div class="sortOption">
-				<label for="sort">Sort</label>
-				<select name="sort" id="sort">
-					<option value="featured">Featured</option>
-					<option value="Best_Selling">Best Selling</option>
-					<option value="lth">Price (Low to High)</option>
-					<option value="htl">Price (High to Low)</option>
-					<option value="newest">Newest</option>
-				</select>
-			</div>
+	<!-- filter options -->
+	<div class="options">
+		<div class="sortOption">
+			<label for="sort">Sort</label>
+			<select name="sort" id="sort">
+				<option value="featured">Featured</option>
+				<option value="Best_Selling">Best Selling</option>
+				<option value="lth">Price (Low to High)</option>
+				<option value="htl">Price (High to Low)</option>
+				<option value="newest">Newest</option>
+			</select>
 		</div>
+	</div>
 
-		<div class="content">
-			
-		</div>
+	<div class="content">
 
-	</body>
-	<script src="scripts/catalog.js"></script>
+	</div>
+
+	<div id="footer-import"></div>
+
+
+</body>
+<script src="scripts/catalog.js"></script>
+<script type="module">
+	import navbar from "./components/navbar.js";
+	import footer from "./components/footer.js";
+
+
+	let navbars = document.getElementById("navbar-import");
+
+	navbars.innerHTML = navbar();
+
+	let footers = document.getElementById("footer-import");
+
+	footers.innerHTML = footer();
+
+</script>
+
 </html>

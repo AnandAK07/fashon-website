@@ -138,53 +138,53 @@ data.forEach((elem) => {
 	button.textContent = "Add to Bag";
 	button.classList.add("addtobag")
 	button.dataset.id = elem.id;
-	button.addEventListener("click", ()=>{
-		if(check(elem.title, elem.id, elem.desc)==true){
-			alert('item already in cart')
-		}else{
-			cartData.push(elem);
-		    localStorage.setItem('cartData', JSON.stringify(cartData));
-		}
-	});
+	button.addEventListener("click", addtocart)
+		// if(check(elem.title, elem.id, elem.desc)==true){
+		// 	alert('item already in cart')
+		// }else{
+		// 	cartData.push(elem);
+		//     localStorage.setItem('cartData', JSON.stringify(cartData));
+		// }
+	// });
 
 	cardDiv.append(image_a, title_price, desp, button);
 	content.appendChild(cardDiv)
 	
 })
-function check(name, id, desc){
-	let checkedVal=cartData.filter(function(elem){
-		return elem.title==name || elem.id==id || elem.desc==desc
-	})
-	if(checkedVal!=0){
-		return true;
-	}else{
-		return false;
-	}
-}
-
-// function addtocart(event){
-// 	const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
-// 	const button = event.target;
-// 	let id = button.dataset.id;
-// 	// console.log(button.dataset.id);
-// 	console.log(id);
-// 	let idFound = false;
-// 	cart_data.forEach((elem) => {
-// 		if(elem.id ===  id){
-// 			elem.id = id;
-// 			elem.quantity = elem.quantity +1;
-// 			idFound = true
-			
-// 		}
+// function check(name, id, desc){
+// 	let checkedVal=cartData.filter(function(elem){
+// 		return elem.title==name || elem.id==id || elem.desc==desc
 // 	})
-// 	if(!idFound){
-// 		const obj = {
-// 			id: id,
-// 			quantity: 1,
-// 		}
-// 		cart_data.push(obj)
+// 	if(checkedVal!=0){
+// 		return true;
+// 	}else{
+// 		return false;
 // 	}
-// 	localStorage.setItem("cart_data", JSON.stringify(cart_data));
 // }
+
+function addtocart(event){
+	const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
+	const button = event.target;
+	let id = button.dataset.id;
+	// console.log(button.dataset.id);
+	console.log(id);
+	let idFound = false;
+	cart_data.forEach((elem) => {
+		if(elem.id ===  id){
+			elem.id = id;
+			elem.quantity = elem.quantity +1;
+			idFound = true
+			
+		}
+	})
+	if(!idFound){
+		const obj = {
+			id: id,
+			quantity: 1,
+		}
+		cart_data.push(obj)
+	}
+	localStorage.setItem("cart_data", JSON.stringify(cart_data));
+}
 
 

@@ -1,458 +1,265 @@
-var  ITEMS=[
-
-  { id:1, 
-    brand_name:"Louis Philip",
-productType:"mansclothing",
-    name:"LP Brand - Symbol Men Shirt",
-   image_url:"https://m.media-amazon.com/images/I/A1wEjvjUA-L._AC_UL480_FMwebp_QL65_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/A1yExRGrofL._AC_UX679_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/91ELg13MgUL._AC_UX679_.jpg",
-   strikedoffprice: "799",
-   price: "557",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:2, 
-  brand_name:"Louis Philip",
-productType:"mansclothing",
-    name:"LP Brand - Symbol Men Shirt",
-   image_url:"https://m.media-amazon.com/images/I/911xrpb4BGL._AC_UL480_FMwebp_QL65_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/91feHr7BH1L._AC_UY879_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/91EiDMKUUuL._AC_UY879_.jpg",
-   strikedoffprice: "799",
-   price: "557",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-
-{  id:3, 
-  brand_name:"Louis Philip",
-productType:"mansclothing",
-    name:"LP Brand - Symbol Men Shirt",
-   image_url:"https://m.media-amazon.com/images/I/71ORz8flzkL._AC_UL480_QL65_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/61pO6WKIePL._AC_UY879_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/71Md5hfnoLL._AC_UY879_.jpg",
-   strikedoffprice: "799",
-   price: "557",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-
-{  id:4, 
-  brand_name:"Louis Philip",
-productType:"mansclothing",
-    name:"LP Brand - Symbol Men Shirt",
-   image_url:"https://m.media-amazon.com/images/I/61UqWXWlsbL._AC_UL480_FMwebp_QL65_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81NP3Awt2VL._AC_UY879_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/71TsJcKT6BL._AC_UY879_.jpg",
-   strikedoffprice: "799",
-   price: "557",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:5, 
-  brand_name:"MAN MATTERS",
-  productType:"mansCream",
-    name:"Man Matters Biotin Hair Gummies | 60 Days Pack | With Biotin, |100% Vegetarian | 60 Gummies",
-   image_url:"https://m.media-amazon.com/images/I/81bt4NnbTOL._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81jL0EGMmfL._SX569_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/812po+vEY3L._SX569_.jpg",
-   strikedoffprice: "849",
-   price: "799",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:6, 
-  brand_name:"The Man Company",
-productType:"mansCream",
-    name:"The Man Company Skin Brightening Cream with Multani Mitti, Coco Butter | Removes Blackhead - 30 gm",
-   image_url:"https://m.media-amazon.com/images/I/51QZU5qQRVL._SY450_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/71YpI+Nin1L._SY450_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/71LBwLbxtxL._SY450_.jpg",
-   strikedoffprice: "299",
-   price: "189",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:7, 
-  brand_name:"GARNIER",
-productType:"mansCream",
-    name:"Garnier Men, Face Wash, Brightening & Anti-Pollution, TurboBright Double Action, 150 g",
-   image_url:"https://m.media-amazon.com/images/I/51YOFiC3zvL._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/61pOAOfbDML._SX425_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/61qEEmhOTLL._SX425_.jpg",
-   strikedoffprice: "325",
-   price: "262",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:8, 
-  brand_name:"URBAN FOREST",
-productType:"wallet",
-    name:"URBAN FOREST Oliver Redwood Leather Wallet for Men",
-   image_url:"https://m.media-amazon.com/images/I/71t7CgBwJ4L._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81wc7fARCsL._SY741_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/81T8LdEzLQL._SX569_.jpg",
-   strikedoffprice: "2000",
-   price: "499",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:9, 
-  brand_name:"RIGOHILL",
-productType:"wallet",
-    name:"RIGOHILL Doger Olive Green Mens Leather Wallet | Leather Wallet for Men | RFID Mens Wallet",
-   image_url:"https://m.media-amazon.com/images/I/71SYvtX2YmL._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/71lhhYRTFpL._SX569_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/81FlhNtY3NL._SX569_.jpg",
-   strikedoffprice: "2499",
-   price: "499",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:10, 
-  brand_name:"NAPA HIDE",
-productType:"wallet",
-    name:"NAPA HIDE Leather Wallet for Men I Handcrafted I Multiple Credit | I 2 Secret Compartments",
-   image_url:"https://m.media-amazon.com/images/I/81aZAmkJQWL._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/91GgbctZ1EL._UX679_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/81gZOqQXT9L._UX679_.jpg",
-   strikedoffprice: "1499",
-   price: "299",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:11, 
-  brand_name:"WildHorn",
-productType:"wallet",
-    name:"WildHorn Trifold Leather Wallet for Men I Handcrafted I Ultra Strong Stitching | I Currency Compartment",
-   image_url:"https://m.media-amazon.com/images/I/71SJJMXG19L._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/813-bVZMpIL._SX569_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/81LLM2H7xsL._SX569_.jpg",
-   strikedoffprice: "1499",
-   price: "299",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:12, 
-  brand_name:"Fastrac",
-productType:"mansSunglasses",
-    name:"Fastrack Men Square Black Sunglasses-Pack of 1",
-   image_url:"https://m.media-amazon.com/images/I/61+THk53YIL._AC_UL400_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/619hy5yVQWL._UX522_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/61vPBNLue7L._UX679_.jpg",
-   strikedoffprice: "799",
-   price: "699",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:13, 
-  brand_name:"VELOCITY STORE",
-productType:"mansSunglasses",
-    name:"Velocity Polarized Aviator Green INJ POL Sunglasses for Men",
-   image_url:"https://m.media-amazon.com/images/I/51TZG3rY+DL._UX679_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/51J7FIerYCL._UX679_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/518KAsYiirL._UX679_.jpg",
-   strikedoffprice: "1499",
-   price: "1299",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:14, 
-  brand_name:"Fastrack",
-productType:"mansSunglasses",
-    name:"Fastrack Men Pilot Green Sunglasses-Pack of 1",
-   image_url:"https://m.media-amazon.com/images/I/61XFwxOh4GL._UX679_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/61X3yRvhrLL._UX679_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/71RLeDOfVEL._UX522_.jpg",
-   strikedoffprice: "2099",
-   price: "1965",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:15, 
-  brand_name:"ELEGANTE",
-productType:"mansSunglasses",
-    name:"ELEGANTE Mens Square Sunglasses, UV Protected Stylish Sun Glasses for Men",
-   image_url:"https://m.media-amazon.com/images/I/51bzps707YL._UX679_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/71lCmJtpyHL._UX679_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/61vE4kusVTL._UX679_.jpg",
-   strikedoffprice: "2499",
-   price: "596",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:16, 
-  brand_name:"FREECULTR",
-productType:"mansclothing",
-    name:"FREECULTR Unisex Printed Bamboo Bandana Face Mask for Dust and Sun Protection",
-   image_url:"https://m.media-amazon.com/images/I/718-a6R5nWL._UX425_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/71CS9pbsQPL._UX425_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/71xrPzGy+0L._UX425_.jpg",
-   strikedoffprice: "999",
-   price: "499",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:17, 
-  brand_name:"Lymio",
-productType:"mansclothing",
-    name:"Lymio Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt || Men Printed Shirt (Patta)",
-   image_url:"https://m.media-amazon.com/images/I/71On2XSPuRL._UY445_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81300Ou0hAL._UY445_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/7143xg-yZVL._UY445_.jpg",
-   strikedoffprice: "4999",
-   price: "379",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:18, 
-  brand_name:"Amazon",
-productType:"mansclothing",
-    name:"Amazon Brand - Symbol Men Shirt",
-   image_url:"https://m.media-amazon.com/images/I/81gEEU2IeHL._UX522_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81jMs8fB4fL._UX522_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/91yl4ysaxoL._UX522_.jpg",
-   strikedoffprice: "2099",
-   price: "557",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-},
-{  id:19, 
-  brand_name:"Amazon",
-productType:"mansclothing",
-    name:"Amazon Brand - Symbol Men Formal Shirt",
-   image_url:"https://m.media-amazon.com/images/I/713xbqIKW4L._UX522_.jpg",
-   image_url1:"https://m.media-amazon.com/images/I/81tuLcV5zTL._UX522_.jpg",
-   image_url2:"https://m.media-amazon.com/images/I/61PNLI3SYrL._UX522_.jpg",
-   strikedoffprice: "1699",
-   price: "836",
-   save: "save 30%",
-     extrasave : "Extra 15% OFF",
-     qty:1
-}
- ];
-// let cartData=JSON.parse(localStorage.getItem("cartPage"))||[];
-
-// function displayCart(data){
-    
-//         let parent=document.getElementById("cartPage");
-//         parent.innerHTML="";
-//         let bag=document.createElement("h2");
-//         bag.textContent=`Your bag(${data.length} items)`
-//         let notification=document.createElement("h3");
-//         notification.textContent="Congrats! You get free standard shopping"
-//         let line=document.createElement("hr");
-//         parent.append(bag,notification,line);
-       
-       
-//         data.map((el)=>{
-//         let cart=document.createElement("div");
-//         let left=document.createElement("div");
-        
-//         let right=document.createElement("div");
-//         let image=document.createElement("img");
-//         image.src=el.image_url;
-        
-//         let name=document.createElement("a");
-//         name.textContent=el.name;
-//         let price=document.createElement("p");
-//         price.textContent=el.price;
-//         let top=document.createElement("div");
-        
-//         let likebtn=document.createElement("button");
-//         top.append(name,likebtn);
-//         let buttom=document.createElement("div");
-//         // let increase=document.createElement("button");
-//         // let decrease=document.createElement("button");
-//         let remove=document.createElement("button");
-//         remove.textContent="Remove";
-//         buttom.append(price);
-//         let line=document.createElement("hr");
-//         left.append(image);
-//         right.append(top,buttom);
-//         cart.append(remove,left,right);
-//         parent.append(cart,line);
-//     })
-// }
-
-// displayCart(cartData);
-
-let cart_data=JSON.parse(localStorage.getItem("cartPage"))||[]
-
-const openBtn=document.getElementById('open_cart_btn')
-const cart=document.getElementById('side_cart')
-const closeBtn=document.getElementById('close_btn')
-const backdrop=document.querySelector('.backdrop')
-const itemsEl=document.querySelector('.items')
-const cartItems=document.querySelector('.cart_items')
-const itemsNum=document.getElementById('items_num')
-const itemsNums=document.getElementById('items_nums')
-const subtotalPrice=document.getElementById('subtotal_price')
-const checkout=document.getElementById('checkout')
-
-renderItems()
-renderCartItems()
+const data = [
+	{
+		id: 1,
+		title: "Futuredew",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-futuredew-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Oil serum hybrid",
+		price: "26",
+		long_desc_title: "An instant, dewy glow that lasts.",
+		long_desc: "An oil-serum hybrid that's a one-step shortcut to the way your skin looks after a full skincare routine. Packed with some of skincare’s most hydrating heavy-hitters, nourishing oils and powerful plant-based extracts give you a gleamy, well-moisturized, brighter look that lasts up to 12 hours.",
+		second_img: "https://glossier-prod.imgix.net/products/futuredew-9.jpg?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist tested, Good for all skin types",
+	},
+	{
+		id: 2,
+		title: "Balm Dotcom",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-bdc-wildfig-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Universal salve",
+		price: "14",
+		long_desc_title: "Our cult-favorite, do-everything lip balm.",
+		long_desc: "Our universally-loved lip balm has been a fan favorite since 2014. Formulated with antioxidants and natural emollients, the vegan, does-it-all formula immediately nourishes dry, chapped lips and keeps them quenched for hours. The specially-designed applicator makes sure your balm applies exactly where you want it. With this one, you can do it all and bring it everywhere.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-bdc-wildfig-carousel-09.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist-tested, long-lasting moisture",
+	},
+	{
+		id: 3,
+		title: "Milky Jelly Cleanser",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Conditioning face wash",
+		price: "19",
+		long_desc_title: "A super gentle cleansing experience.",
+		long_desc: "A nourishing and pH-balanced gel-cream cleanser that plays nicely with all skin types. Conditioning ingredients leave skin soft, smooth and never stripped to start your day. Then dissolves dirt, oil and makeup when you’re ready to wipe the day away.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-mjc-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist-tested, formulated without fragrance",
+	},
+	{
+		id: 4,
+		title: "Cleanser Concentrate",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Clarifying face wash",
+		price: "21",
+		long_desc_title: "A plant-powered deep clean",
+		long_desc: "A highly concentrated, purifying cleanser that gently exfoliates, clarifies and re-energizes skin in 60 seconds. An A-Team of powerful plant exfoliators—Grape Extract and Lactic Acid—gently smooth skin and brighten your glow, while amino acid surfactants create an undetectable film that holds on to key ingredients so they can work on the skin instead of just rinsing down the drain.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-cleanser-concentrate-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist tested, formulated without fragrance, recyclable bottle",
+	},
+	{
+		id: 5,
+		title: "Priming Moisturizer",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Buildable hydrating creme",
+		price: "24",
+		long_desc_title: "Light and buildable moisture for a dewy, smooth canvas.",
+		long_desc: "A lightweight, buildable moisturizer that instantly brings out the best in all skin types. It hydrates, visibly evens skin texture, and minimizes the look of pores—while priming skin for gorgeous makeup application.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-carousel-06.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist-tested, long-lasting moisture, formulated without fragrance, good for for all skin types",
+	},
+	{
+		id: 6,
+		title: "Priming Moisturizer Balance",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-01_4b6e0d57-d05e-46fc-8610-ab6201468c2c.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Oil-control gel cream",
+		price: "25",
+		long_desc_title: "One step to moisturize, control shine, and refine the look of pores—specifically formulated for oily and combination skin.",
+		long_desc: "A fast-absorbing, lightweight gel-cream moisturizer that balances oil without over-drying or leaving a powdery finish. Immediately, thanks to Marine Extract and Niacinamide, pores appear smaller, shine is gone, and skin is hydrated and happy—with more skin-balancing benefits over time.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-balance-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist-tested, formulated without fragrance, alcohol and oil-free, gluten and dairy-free, GMO-free",
+	},
+	{
+		id: 7,
+		title: "Priming Moisturizer Rich",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Luxurious face cream",
+		price: "35",
+		long_desc_title: "Dry skin’s best friend—an ultra rich, buttery moisturizer.",
+		long_desc: "A luxuriously rich yet fast-absorbing face cream that delivers a surge of long-lasting hydration. The buttery texture and blend of botanical oils and glycerin melt into skin to give you a smooth, dewy finish that’s perfectly prepped for makeup.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-priming-moisturizer-rich-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Formulated without fragrance, silicone-free, recyclable glass",
+	},
+	{
+		id: 8,
+		title: "Invisible Shield",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-invisible-shield-carousel-01_f6471fa7-9197-4c39-8cec-00ab11b7691b.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Daily sunscreen +",
+		price: "25",
+		long_desc_title: "Sunscreen for people who hate wearing sunscreen.",
+		long_desc: "Lightweight and undetectable, this water-gel SPF 35 applies like a serum, with no greasy residue or white cast. Specially designed so even the sunscreen haters can't help but fall in love with it, Invisible Shield helps prevent sun damage and sun burn, while neutralizing harmful free radicals. Plus, the active microcapsules instantly absorb onto skin and play well with makeup, so you really have no reason to skip SPF.",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-invisible-shield-carousel-07.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist-tested, plays well with all skin types",
+	},
+	{
+		id: 9,
+		title: "After Baume",
+		primary_image: "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-01_23fe78f1-1917-42e6-9448-b7f44e65acfc.png?auto=compress,format&cs=srgb&w=360",
+		desc: "Moisture barrier recovery cream",
+		price: "28",
+		long_desc_title: "A puffer jacket for your skin.",
+		long_desc: "A daily moisture barrier recovery cream perfect for very dry and/or sensitive skin. The buttery, cocooning cream formulated with plant-based moisture magnets, Glycerin and Cupuaçu Butter, helps dry skin bounce back and lock in hydration for up to 24 hours. Awarded the National Eczema Association Seal of Acceptance",
+		second_img: "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-08.png?auto=compress,format&cs=srgb&w=540",
+		uses: "", 
+		uses_test: "Dermatologist tested, formulated without fragrance",
+	},
+];
+const cardDiv = document.querySelector(".js-card")
 
 
 
-openBtn.addEventListener('click',openCart)
-closeBtn.addEventListener('click',closeCart)
-backdrop.addEventListener('click',closeCart)
-
-
-//Open Cart
-function openCart(){
-  cart.classList.add('open')
-  backdrop.style.display='block'
-  setTimeout(()=>{
-    backdrop.classList.add('show');
-  },0)
-}
-
-//Close Cart
-function closeCart(){
-  cart.classList.remove('open')
-  backdrop.classList.remove('show');
+function renderPage(){
+  const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
+  cart_data.forEach((elem) => {
+    // Create the main container element
+  // const container = document.createElement("div");
+  // container.className = "justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start";
+  let subtotal = document.querySelector(".js-subtotal")
+  subtotal.innerHTML = "";
+  const container = document.createElement("div");
+  container.className = "justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start";
   
-  setTimeout(()=>{
-    backdrop.style.display='none'
-  },500)
+  const img = document.createElement("img");
+  img.src = `${data[elem.id - 1].primary_image}`;
+  img.alt = "product-image";
+  img.className = "w-full rounded-lg sm:w-40";
+  
+  container.appendChild(img);
+  
+  const contentContainer = document.createElement("div");
+  contentContainer.className = "sm:ml-4 sm:flex sm:w-full sm:justify-between";
+  
+  const insideContentContainer = document.createElement("div");
+  insideContentContainer.className = "mt-5 sm:mt-0";
+  const title = document.createElement("h2");
+  title.className = "text-lg font-bold text-gray-900";
+  title.textContent = data[elem.id - 1].title;
+  
+  const size = document.createElement("p");
+  size.className = "mt-1 text-xs text-gray-700";
+  size.textContent = data[elem.id - 1].desc;
+  insideContentContainer.appendChild(title);
+  insideContentContainer.appendChild(size);
+  contentContainer.appendChild(insideContentContainer)
+  
+  
+  const quantityContainer = document.createElement("div");
+  quantityContainer.className = "mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6";
+  
+  const insideQuantityConntainer = document.createElement("div");
+  insideQuantityConntainer.className = "flex items-center border-gray-100";
+  const decreaseButton = document.createElement("button");
+  decreaseButton.className = "cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50";
+  decreaseButton.textContent = " - ";
+  decreaseButton.dataset.id = elem.id;
+  decreaseButton.addEventListener("click", decreseCount)
+  
+  const quantityInput = document.createElement("input");
+  quantityInput.className = "h-8 w-8 border bg-white text-center text-xs outline-none";
+  quantityInput.type = "text";
+  quantityInput.value = elem.quantity;
+  quantityInput.min = "1";
+  
+  const increaseButton = document.createElement("button");
+  increaseButton.className = "cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50";
+  increaseButton.textContent = " + ";
+  increaseButton.dataset.id = elem.id;
+  increaseButton.addEventListener("click", increaseCount);
+  
+  insideQuantityConntainer.appendChild(decreaseButton);
+  insideQuantityConntainer.appendChild(quantityInput);
+  insideQuantityConntainer.appendChild(increaseButton);
+  quantityContainer.appendChild(insideQuantityConntainer);
+  contentContainer.appendChild(quantityContainer);
+  
+  
+  const priceContainer = document.createElement("div");
+  priceContainer.className = "flex items-center space-x-4";
+  const price = document.createElement("p");
+  price.className = "text-sm";
+  price.textContent = `${data[elem.id -1].price} $`;
+  
+  const removeIcon = document.createElement("svg");
+  removeIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  removeIcon.setAttribute("fill", "none");
+  removeIcon.setAttribute("viewBox", "0 0 24 24");
+  removeIcon.setAttribute("stroke-width", "1.5");
+  removeIcon.setAttribute("stroke", "currentColor");
+  removeIcon.className = "h-5 w-5 cursor-pointer duration-150 hover:text-red-500";
+  
+  const removeIconPath = document.createElement("path");
+  removeIconPath.setAttribute("stroke-linecap", "round");
+  removeIconPath.setAttribute("stroke-linejoin", "round");
+  removeIconPath.setAttribute("d", "M6 18L18 6M6 6l12 12");
+  
+  removeIcon.appendChild(removeIconPath);
+  priceContainer.appendChild(price)
+  priceContainer.appendChild(removeIcon);
+  
+  contentContainer.appendChild(priceContainer);
+  
+  container.appendChild(contentContainer);
+  cardDiv.appendChild(container)
+  subtotal.appendChild(cardDiv);
+})
+renderSubTotal();
 }
 
-//Add Items to Cart
-function addItem(idx,itemId){
-  //find same items
-  const foundedItem=cart_data.find(item=>item.id.toString()===itemId.toString())
-  if(foundedItem){
-    //increase item qty
-    increaseQty(itemId)
-  }else{
-    cart_data.push(ITEMS[idx])
-  }
-updateCart();
-openCart();
-}
+renderPage()
 
-//Render Items
-function renderItems(){
-  ITEMS.forEach((item,idx)=>{
-    const itemEl=document.createElement('div')
-    itemEl.classList.add('items')
-    
-    itemEl.innerHTML=`<img src="${item.image_url}" alt="">
-    <button onclick="addItem(${idx},${item.id})">Add to Cart</button>`
-    itemsEl.appendChild(itemEl)
+
+function renderSubTotal(){
+  const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
+  let total = 0;
+  cart_data.forEach((elem) => {
+    // console.log(elem.quantity);
+    // console.log(typeof Number(data[elem.id - 1].price));
+    total += Number(data[elem.id - 1].price) * elem.quantity;
   })
+  let subtotal = document.querySelector(".js-subtotal")
+
+  let contentDiv = document.createElement("div");
+  contentDiv.className = "mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3";
+  contentDiv.innerHTML = `<div class="mb-2 flex justify-between">
+  <p class="text-gray-700">Subtotal</p>
+  <p class="text-gray-700">$${total}</p>
+</div>
+<div class="flex justify-between">
+  <p class="text-gray-700">Shipping</p>
+  <p class="text-gray-700">$4.99</p>
+</div>
+<hr class="my-4" />
+<div class="flex justify-between">
+  <p class="text-lg font-bold">Total</p>
+  <div class="">
+    <p class="mb-1 text-lg font-bold">$${total + 4.99} USD</p>
+    <p class="text-sm text-gray-700">including VAT</p>
+  </div>
+</div>
+<button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>`
+  subtotal.appendChild(contentDiv);
 }
 
-// Remove cart Items 
-function removeCartItem(itemId){
-  cart_data=cart_data.filter((item)=>item.id!=itemId)
-  updateCart()
+function decreseCount(event){
+  const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
+  const button = event.target;
+  const id = button.dataset.id;
+  cart_data[id-1].quantity = cart_data[id-1].quantity - 1;
+  console.log(cart_data[id-1].quantity);
+  localStorage.setItem("cart_data", JSON.stringify(cart_data));
+  renderPage();
 }
 
-//Increase Qty
-function increaseQty(itemId){
-  cart_data=cart_data.map(item=>item.id.toString()===itemId.toString()?{...item,qty:item.qty+1}:item)
-  updateCart()
+function increaseCount(event){
+  const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
+  const button = event.target;
+  const id = button.dataset.id;
+  cart_data[id-1].quantity = cart_data[id-1].quantity + 1;
+  console.log(cart_data[id-1].quantity);
+  localStorage.setItem("cart_data", JSON.stringify(cart_data));
+  renderPage();
 }
-//Decrease Qty
-function decreaseQty(itemId){
-  cart_data=cart_data.map(item=>item.id.toString()===itemId.toString()?{...item,qty:item.qty>1?item.qty-1:item.qty}:item)
-  updateCart()
-}
-
-// Calculate Items Number
-function calcItemsNum(){
-  let itemsCount=0
-
-  cart_data.forEach((item)=>(itemsCount+=item.qty))
-
-  itemsNums.innerText=`(${itemsCount} items)`
-}
-
-// Calculate Subtotal Price
-function calcSubtotalPrice(){
-  let subtotal=0
-  checkout.innerText=''
-
-  cart_data.forEach((item)=>(subtotal+=item.price*item.qty))
-
-  subtotalPrice.innerText=subtotal
-  checkout.innerText=`$${subtotal} - Checkout`
-}
-
-//Display /Render Cart Items
-
-function renderCartItems(){
-  //remove everything from cart
-  cartItems.innerHTML=''
-
-    if(cart_data.length>0){
-      let mid=document.createElement('div')
-      let notify=document.createElement('h5')
-      notify.innerText='Congrats! You get free standard shopping'
-      let lin=document.createElement('hr')
-      mid.append(notify,lin);
-      cartItems.append(mid)
-    }
-    
-
-  //add new data
-  cart_data.forEach((item,i)=>{
-    const cartItem=document.createElement('div')
-    cartItem.classList.add('cart_item')
-    cartItem.innerHTML=
-    `   
-    <div class="mul" onclick="removeCartItem(${item.id})" class="remove_item">
-        <span id="delP">&times;</span>
-    </div>
-    <div class="cartS">
-      <div class="item_img">
-          <img src="${item.image_url}" alt="">
-      </div>
-      <div class="item_details">
-          <p>${item.name}</p>
-          <strong>$${item.price}</strong>
-          <div class="qty">
-              <span onclick="decreaseQty(${item.id})">-</span>
-              <strong>${item.qty}</strong>
-              <span onclick="increaseQty(${item.id})">+</span>
-          </div>
-      </div>
-    </div>
-    `
-    cartItems.appendChild(cartItem)
-    
-  })
-}
-
-//update cart
-function updateCart(){
-  //rerender cart items with updated data
-  renderCartItems();
-  //Update Items Number in cart
-  calcItemsNum();
-  // Update Subtotal Price
-  calcSubtotalPrice();
-}
-

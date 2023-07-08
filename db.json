@@ -144,6 +144,18 @@
       "second_img": "https://glossier-prod.imgix.net/products/glossier-after-baume-carousel-08.png?auto=compress,format&cs=srgb&w=540",
       "uses": "", 
       "uses_test": "Dermatologist tested, formulated without fragrance"
+    },
+    {
+      "id": 10,
+      "title": "You Look Good Cap",
+      "primary_image": "https://glossier-prod.imgix.net/files/glossier-ylgcap-carousel-01.png?auto=compress,format&cs=srgb&w=360",
+      "desc": "Permanent collection",
+      "price": "30",
+      "long_desc_title": "A wearable compliment.",
+      "long_desc": "Hey there, good looking (yes, you!). Say hello to a new way to top off your confidence. Our mantra, “You Look Good,” was born during Glossier's launch in 2014. It was something we rarely heard or felt from the industry, and something we believe sincerely—that beauty is about being confident in your skin, wherever you are in your journey. The inverted tagline was intentionally designed to create little easter eggs of joy in everyday moments like walking past a mirror, or while creative-directing your own selfie session. It's a nudge to slow down, celebrate your individuality, and remind yourself that you look good.",
+      "second_img": "https://glossier-prod.imgix.net/files/glossier-ylgcap-carousel-07.png?auto=compress,format&cs=srgb&w=540",
+      "uses": "",
+      "uses_test": "100% cotton"
     }
   ]
 }

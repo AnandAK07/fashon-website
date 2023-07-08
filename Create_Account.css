@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
   }
   
   form {
@@ -13,7 +16,7 @@
     margin:auto;
     padding-left:20px;
     padding-right:35px;
-    height: 500px;
+    height: 510px;
   }
   
   h2 {

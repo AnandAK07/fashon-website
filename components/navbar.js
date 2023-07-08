@@ -13,7 +13,11 @@ function navbar(){
       <a href="./catalog.html">sets</a>
     </div>
 
+    
+
     <div id="nav-right">
+    <a id="menurk" href="./catalog.html">MENU</a>
+      
       <a href="">stories</a>
       <a href="./search.html">search</a>
       <a href="./login.html">login</a>

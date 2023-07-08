@@ -8,7 +8,7 @@ function footer(){
                 </div>
                 <br>
                 <div id="rklist">
-                    <a href="#">About us </a>
+                    <a href="https://www.glossier.com/pages/about">About us </a>
                     <a href="#">Stores</a>
                     <a href="#">Careers</a>
                     <a href="#">Blog</a>

@@ -4,11 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/product_details.css" />
+		<link rel="stylesheet" href="./styles/navbar.css">
+		<link rel="stylesheet" href="./styles/footer.css">
         <title>Document</title>
     </head>
     <body>
-		<div class="navbar"></div>
-
+		<div id="navbar-import"></div>
 		<div class="container">
 			<div class="section">
 				<div class="info_section">
@@ -33,6 +34,20 @@
 				</div>
 			</div>
 		</div>
+		<div id="footer-import"></div>
 	</body>
 	<script src="scripts/product_details.js"></script>
+	<script type="module">
+		    import navbar from "./components/navbar.js";
+        import footer from "./components/footer.js";
+
+
+        let navbars = document.getElementById("navbar-import");
+
+        navbars.innerHTML = navbar();
+
+        let footers = document.getElementById("footer-import");
+
+        footers.innerHTML = footer();
+	</script>
 </html>

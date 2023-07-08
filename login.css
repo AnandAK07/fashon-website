@@ -9,10 +9,11 @@
   
   form {
     width: 400px;
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f2f2f2;
+    padding-left: 20px;
+    padding-right: 35px; /* Add space on the right side */
   }
   
   h2 {
@@ -46,7 +47,7 @@
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   .forgot-password a {
     color: black;
     text-decoration: underline;
@@ -67,9 +68,17 @@
   }
   
   .btn-primary {
-    background-color: pink;
+    background-color:  hotpink;
+  }
+
+  .btn-primary:hover {
+    background-color: #115d58; /* Change the hover color */
   }
   
   .btn-secondary {
-    background-color: pink;
+    background-color:  palevioletred;
+  }
+
+  .btn-secondary:hover {
+    background-color:#115d58; /* Change the hover color */
   }

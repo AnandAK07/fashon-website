@@ -11,6 +11,44 @@ function handleInputClick(event) {
   }
 }
 
+function handleInputBlur(event) {
+  const input = event.target;
+  const errorMessage = input.nextElementSibling;
+
+  if (input.value === '') {
+    errorMessage.textContent = `Please enter a ${input.placeholder}`;
+    errorMessage.style.color = 'red';
+  } else {
+    errorMessage.textContent = '';
+  }
+}
+
+
+
+
+// Function to handle input field click and display error message if empty
+function handleInputClick(event) {
+  const input = event.target;
+  const errorMessage = input.nextElementSibling;
+
+  if (input.value === '') {
+    errorMessage.textContent = `Please enter a ${input.placeholder}`;
+    errorMessage.style.color = 'red';
+  } else {
+    errorMessage.textContent = '';
+  }
+}
+
+function handleInputBlur(event) {
+  const input = event.target;
+  const errorMessage = input.nextElementSibling;
+
+  if (input.value === '') {
+    errorMessage.textContent = `Please enter a ${input.placeholder}`;
+    errorMessage.style.color = 'red';
+  }
+}
+
 // Function to handle form submission
 function handleFormSubmit(event) {
   event.preventDefault(); // Prevent form from submitting
@@ -84,13 +122,14 @@ createAccountForm.addEventListener('submit', handleFormSubmit);
 // Get input fields
 const inputFields = document.querySelectorAll('.form-group input');
 
-// Attach click event listener to each input field
+// Attach click and blur event listeners to each input field
 inputFields.forEach(input => {
   input.addEventListener('click', handleInputClick);
+  input.addEventListener('blur', handleInputBlur);
 });
 
 // Event listener for "Sign in to Glossier.com" button
 const signInButton = document.querySelector('.btn.btn-secondary');
 signInButton.addEventListener('click', function () {
-window.location.href = 'login.html';
+  window.location.href = 'login.html';
 });

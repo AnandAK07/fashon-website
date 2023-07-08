@@ -7,11 +7,13 @@
   
   form {
     width: 500px; /* Updated width */
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f2f2f2;
     margin:auto;
+    padding-left:20px;
+    padding-right:35px;
+    height: 500px;
   }
   
   h2 {
@@ -74,9 +76,17 @@
   }
   
   .btn-primary {
-    background-color:pink;
+    background-color: hotpink;
+  }
+
+  .btn-primary:hover{
+    background-color:  #115d58;
   }
   
   .btn-secondary {
-    background-color: pink;
+    background-color: hotpink;
+  }
+
+  .btn-secondary:hover{
+    background-color:  #115d58;
   }

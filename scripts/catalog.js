@@ -109,41 +109,46 @@ const data = [
 	},
 ];
 
-const content = document.querySelector(".content");
-data.forEach((elem) => {
-	const cardDiv = document.createElement("div");
-	cardDiv.classList.add("card");
-
-	const image_a = document.createElement("a");
-	const primary_image = document.createElement("img");
-	primary_image.src = `${elem.primary_image}`;
-	image_a.href = `product_details.html/?id=${elem.id}`
-	image_a.appendChild(primary_image);
-
-	const title_price = document.createElement("div");
-	title_price.classList.add("title-price");
-	const title = document.createElement("h3");
-	title.classList.add("title");
-	title.textContent = elem.title;
-	const price = document.createElement("p");
-	price.textContent = `$${elem.price}`
-	price.classList.add("price");
-	title_price.append(title, price);
-
-	const desp = document.createElement("p");
-	desp.classList.add("desp");
-	desp.textContent = elem.desc;
-
-	const button = document.createElement("button")
-	button.textContent = "Add to Bag";
-	button.classList.add("addtobag")
-	button.dataset.id = elem.id;
-	button.addEventListener("click", addtocart);
-
-	cardDiv.append(image_a, title_price, desp, button);
-	content.appendChild(cardDiv)
+async function renderPage(){
+	let response  = await fetch("http://localhost:3000/data");
+	let data = await response.json();
+	const content = document.querySelector(".content");
+	data.forEach((elem) => {
+		const cardDiv = document.createElement("div");
+		cardDiv.classList.add("card");
 	
-})
+		const image_a = document.createElement("a");
+		const primary_image = document.createElement("img");
+		primary_image.src = `${elem.primary_image}`;
+		image_a.href = `product_details.html/?id=${elem.id}`
+		image_a.appendChild(primary_image);
+	
+		const title_price = document.createElement("div");
+		title_price.classList.add("title-price");
+		const title = document.createElement("h3");
+		title.classList.add("title");
+		title.textContent = elem.title;
+		const price = document.createElement("p");
+		price.textContent = `$${elem.price}`
+		price.classList.add("price");
+		title_price.append(title, price);
+	
+		const desp = document.createElement("p");
+		desp.classList.add("desp");
+		desp.textContent = elem.desc;
+	
+		const button = document.createElement("button")
+		button.textContent = "Add to Bag";
+		button.classList.add("addtobag")
+		button.dataset.id = elem.id;
+		button.addEventListener("click", addtocart);
+	
+		cardDiv.append(image_a, title_price, desp, button);
+		content.appendChild(cardDiv)
+		
+	})
+}
+
 
 function addtocart(event){
 	const cart_data = JSON.parse(localStorage.getItem("cart_data")) || [];
@@ -180,7 +185,13 @@ function debounce(func, timeout = 300){
   }
 	
 async function saveInput(){
-	console.log('Saving data');
+	let searchData = document.querySelector("#search").value;
+	if(searchData < 1){
+		renderPage();
+	}else{
+		console.log("sheeesh");
+	}
 }
   
 const processChanges = debounce(() => saveInput());
+renderPage();

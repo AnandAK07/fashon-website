@@ -1,6 +1,6 @@
 # Fashon Website
 
-Fashon Website is a web application designed for showcasing fashion-related content. It is built using HTML, CSS, JavaScript, and Firebase for authentication. Contributions have been made by [Contributor].
+Fashon Website is a web application designed for showcasing fashion-related content. It is built using HTML, CSS, JavaScript, and Firebase for authentication. Contributions have been made by Ananda Kumar K,Abhi Jausd.
 
 ## Table of Contents
 

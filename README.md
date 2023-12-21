@@ -7,11 +7,7 @@ Fashon Website is a web application designed for showcasing fashion-related cont
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Features](#features)
 - [Contributors](#contributors)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -33,3 +29,6 @@ These instructions will help you set up the project on your local machine for de
    ```bash
    git clone https://github.com/AnandAK07/fashon-website.git
    cd fashon-website
+## Contributors
+
+- [Abhi Jausd](https://github.com/abhijasud)
